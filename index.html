@@ -8,11 +8,10 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <a href="#">
@@ -21,36 +20,30 @@
     </div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#features-section">Features</a></li>
+      <li><a href="#get-started">Get Started</a></li>
+      <li><a href="#experience-camell">Experience Camell</a></li>
+      <li><a href="#footer">Contact</a></li>
     </ul>
     <div class="cta">
       <a href="#get-started" class="btn">Join the Waitlist</a>
     </div>
     <div class="menu-toggle"><box-icon name='menu'></box-icon></div>
-
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero reveal">
+    <div class="hero-content">
+      <h1 class="hero-header">Campus Commerce, Reimagined</h1>
+      <p class="hero-sub">Camell connects campus vendors with students through bicycle delivery—creating earning opportunities while serving campus communities.</p>
+      <div class="hero-link">
+        <a id="btn" href="#get-started" class="btn">Join the Waitlist</a>
+      </div>
+    </div>
     <div class="hero-img">
       <img src="assets/phone.jpg" alt="Phone Image" />
     </div>
-    <div class="hero-two">
-      <div class="hero-texts">
-        <h1 class="hero-header">Campus Commerce, Reimagined</h1>
-        <p class="hero-sub">Camell connects campus vendors with students through bicycle delivery—creating earning opportunities while serving campus communities.</p>
-        <div class="hero-link">
-          <a id="btn" href="#" class="btn">Join the Waitlist</a>
-        </div>
-      </div>
-      <div class="second-img">
-        <img src="assets/count.jpg" alt="Statistics Image" />
-      </div>
-    </div>
   </section>
 
-     <!-- Get Started -->
   <section class="get-started reveal" id="get-started">
     <div class="badge"><span>&middot;</span> <span>Get Started</span></div>
     <h2 class="get-started-header">Get Started with Camell</h2>
@@ -58,41 +51,112 @@
     <div class="cards">
       <div class="cards-all">
         <div class="card">
-          <img src="assets/phone.jpg" alt="">
+          <img src="assets/img1 (3).png" alt="">
           <h1>Vendor Sign-Up</h1>
           <p>Become a vendor and increase your visibility on campus.</p>
-          <div class="btn">Join the Waitlist</div>
+          <a href="#get-started" class="btn">Join the Waitlist</a>
         </div>
         <div class="card">
-          <img src="assets/phone.jpg" alt="">
+          <img src="assets/img1 (2).png" alt="">
           <h1>Student Delivery</h1>
           <p>Earn money by delivering items to fellow students using bicycles.</p>
-          <div class="btn">Join the Waitlist</div>
+          <a href="#get-started" class="btn">Join the Waitlist</a>
         </div>
         <div class="card">
-          <img src="assets/phone.jpg" alt="">
+          <img src="assets/img1 (1).png" alt="">
           <h1>Order From Anywhere</h1>
           <p>Quickly place orders from campus vendors and get it delivered.</p>
-          <div class="btn">Join the Waitlist</div>
+          <a href="#get-started" class="btn">Join the Waitlist</a>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="features-section reveal" id="features-section">
+    <div class="features-header-container">
+      <div class="badge"><span>&middot;</span> <span>Features</span></div>
+      <h2 class="features-header">All Features You Need, All In One Place</h2>
+      <p class="features-subtext">Explore! Camell's amazing features.</p>
+    </div>
+    <div class="features-grid">
+      <div class="boxed">100px</div>
+      <div class="boxed">100px</div>
+      <div class="boxed">100px</div>
+      <div class="boxed">100px</div>
+      </div>
+  </section>
 
+  <section class="experience-camell reveal" id="experience-camell">
+    <div class="experience-content">
+      <h2 class="experience-header">Be First To Experience Camell</h2>
+      <p class="experience-text">Join the Camell waitlist today and unlock early access to fast deliveries, smart errands, and daily deals—all powered by students, for students.</p>
+      <br />
+      <a href="#get-started" class="btn join-waitlist-btn">Join the waitlist</a>
+    </div>
+    <div class="experience-img">
+      <img src="assets/iMockup - iPhone 16.png" alt="Camell App Mockup">
+    </div>
+    <div class="rel"></div>
+    <div class="rel-2"></div>
+  </section>
 
-    <!--Features-->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-column logo-column">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Camell Logo" />
+        </div>
+        <p>Camell is an E-Commerce Service Inc. Company 2025</p>
+        <div class="social-icons">
+          <a href="#"><box-icon type='logo' name='facebook-circle'></box-icon></a>
+          <a href="#"><box-icon type='logo' name='twitter'></box-icon></a>
+          <a href="#"><box-icon type='logo' name='instagram-alt'></box-icon></a>
+          <a href="#"><box-icon type='logo' name='linkedin-square'></box-icon></a>
+        </div>
+      </div>
 
+      <div class="footer-column">
+        <h3>Newsletter Subscription</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter Email address" required />
+          <button type="submit" class="btn-white short">Subscribe</button>
+        </form>
+      </div>
 
+      <div class="footer-column">
+        <h3>Features</h3>
+        <ul>
+          <li><a href="#">Delivery</a></li>
+          <li><a href="#">Wallet & Bonus</a></li>
+          <li><a href="#">Errands</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
 
+      <div class="footer-column">
+        <h3>Benefit</h3>
+        <ul>
+          <li><a href="#">Key Benefits</a></li>
+          <li><a href="#">Special Features</a></li>
+          <li><a href="#">Wallet & Additions</a></li>
+          <li><a href="#">Incentives</a></li>
+        </ul>
+      </div>
 
-
-    <!--CTA-->
-
-
-
-
-    <!--Footer-->
+      <div class="footer-column">
+        <h3>Pricing</h3>
+        <ul>
+          <li><a href="#">Basic</a></li>
+          <li><a href="#">Premium</a></li>
+          <li><a href="#">Enterprise</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Camell. All rights reserved.</p>
+      <!-- <p>Privacy Policy | Terms of Service</p> -->
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
