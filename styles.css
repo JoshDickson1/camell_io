@@ -145,6 +145,10 @@ a {
   line-height: 1.1;
 }
 
+.w-100{
+  width: 400px;
+}
+
 .hero-sub {
   font-size: 1.3rem;
   margin-bottom: 30px;
@@ -276,17 +280,69 @@ a {
   margin: 0 auto;
 }
 
-.boxed{
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+/* Feature Box */
+.boxed-1 {
+  background-color: #250e00;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+.boxed {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.boxed:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.boxed box-icon,
+.boxed-1 box-icon {
+  width: 50px;
+  height: 50%;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  background: #ff5000;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Feature Title */
+.boxed h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Feature Description */
+.boxed p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+/* Feature Title */
+.boxed-1 h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #ff5000;
+}
+
+/* Feature Description */
+.boxed-1 p {
+  color: #ededed;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .feature-card {
@@ -634,6 +690,10 @@ a {
 
   .nav-links.active {
     display: flex;
+  }
+
+  .w-100{
+    width: 100%;
   }
 
   .cta {
