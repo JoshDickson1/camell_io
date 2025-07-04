@@ -23,6 +23,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
   background: #fff;
+  width: 100vw;
   overflow-x: hidden;
   color: #1a1a1a;
 }
@@ -90,6 +91,18 @@ a {
   transition: all 0.3s ease;
   font-weight: 600;
 }
+
+.btn-i {
+  padding: 12px 24px;
+  background-color: #ff4000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
 
 .short{
   max-width: 200px;
@@ -246,7 +259,7 @@ a {
 
 /* Features Section */
 .features-section {
-  padding: 100px 50px;
+  padding: 10px 50px;
   text-align: center;
   background: #fff;
 }
@@ -480,9 +493,20 @@ a {
   outline: none;
 }
 
+.input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ff9665;
+  background-color: #a2aef100;
+  color: #3c1400;
+  font-size: 1rem;
+  outline: none;
+}
+
 .newsletter-form input::placeholder {
   color: #888;
 }
+
 
 .newsletter-form .btn {
   width: 100%;
@@ -501,6 +525,7 @@ a {
 @media (max-width: 992px) {
   .navbar {
     padding: 15px 30px;
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
   }
   .nav-links {
     gap: 20px;
@@ -586,11 +611,15 @@ a {
     right: 0; /* Remove fixed positioning */
   }
 
+  .card{
+  max-width: 100%;
+  }
+
   .nav-links {
     flex-direction: column;
     width: 100%;
     display: none;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.93);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 0px 0px 10px 10px;
@@ -651,6 +680,38 @@ a {
     width: 100%;
     margin: auto;
   }
+
+  .input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ff9665;
+  background-color: #a2aef100;
+  color: #3c1400;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  }
+
+  .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  gap: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+  .btn-i {
+  padding: 12px 24px;
+  background-color: #ff4000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 10px;
+}
 }
 
 @media (max-width: 480px) {
