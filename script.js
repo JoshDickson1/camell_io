@@ -38,19 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Get Started Cards Slideshow
   const getStartedCardsData = [
     {
-      image: 'assets/img1 (3).png',
+      image: 'assets/camelliiii.jpg',
       title: 'YOUsers',
       description: 'Become a vendor and increase your visibility on campus.',
       link: 'https://docs.google.com/forms/d/e/1FAIpQLSfDcVLFlkHLuiCs_LNYVHmjBwu6SOUB9TyPQJsjW78UVPJ0lg/viewform?usp=header' // Unique link for YOUsers
     },
     {
-      image: 'assets/img1 (2).png',
+      image: 'assets/camellii.jpg',
       title: 'Moovers',
       description: 'Earn money by delivering items to fellow students using bicycles.',
       link: 'https://docs.google.com/forms/d/e/1FAIpQLSdK3sUptDj1v0b7mWCXS6OBTf5qAMo9KCSUFUTNIwC7xZWSZA/viewform?usp=header' // Unique link for Moovers
     },
     {
-      image: 'assets/img1 (1).png',
+      image: 'assets/camelli.jpg',
       title: 'Vendors',
       description: 'Quickly place orders from campus vendors and get it delivered.',
       link: 'https://docs.google.com/forms/d/e/1FAIpQLSf0u5kibJlFyn7BoJAIq-k2Jpq7jcCVnCbIlO32kt26vNEfkg/viewform?usp=preview' // Unique link for Vendors
