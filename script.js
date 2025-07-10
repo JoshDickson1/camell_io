@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       image: 'assets/camelliiii.jpg',
       title: 'YOUsers',
-      description: 'Become a vendor and increase your visibility on campus.',
+      description: 'Quickly place orders from campus vendors and get it delivered.',
       link: 'https://docs.google.com/forms/d/e/1FAIpQLSfDcVLFlkHLuiCs_LNYVHmjBwu6SOUB9TyPQJsjW78UVPJ0lg/viewform?usp=header' // Unique link for YOUsers
     },
     {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       image: 'assets/camelli.jpg',
       title: 'Vendors',
-      description: 'Quickly place orders from campus vendors and get it delivered.',
+      description: 'Become a vendor and increase your visibility on campus.',
       link: 'https://docs.google.com/forms/d/e/1FAIpQLSf0u5kibJlFyn7BoJAIq-k2Jpq7jcCVnCbIlO32kt26vNEfkg/viewform?usp=preview' // Unique link for Vendors
     }
     // Add more cards here if needed
