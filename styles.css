@@ -209,24 +209,33 @@ a {
   margin-right: auto;
 }
 
+/* Updated styles for get-started cards slideshow */
+.cards-wrapper {
+  overflow: hidden; /* Hide overflowing cards */
+  position: relative;
+  max-width: 960px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
 .cards-all {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card {
+  flex: 0 0 33.333%; /* Show 3 cards at a time for larger screens */
+  max-width: 33.333%;
   border-radius: 15px;
   background: transparent;
   padding: 4px;
-  max-width: 300px;
   text-align: start;
   align-items: flex-start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Space out content */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 15px; /* Added padding to give some space around content within the card */
 }
 
 .card img {
@@ -260,10 +269,29 @@ a {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Even stronger shadow on hover */
 }
 
+.slider-dots {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ff4000;
+}
 
 /* Features Section */
 .features-section {
-  padding: 10px 50px;
+  padding: 40px 50px;
   text-align: center;
   background: #fff;
 }
@@ -271,6 +299,65 @@ a {
 .features-header-container {
   margin-bottom: 60px;
 }
+
+ .boxed-1 { 
+  background: #250e00;
+  border-radius: 16px;
+  padding: 30px 20px; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  color: #efefef; /* Text color for the first feature box */
+   } 
+
+.boxed { 
+  background-color: #fff; 
+  border-radius: 16px; 
+  padding: 30px 20px; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  text-align: left;
+ } 
+
+
+
+ .boxed:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); 
+ }
+
+ .boxed box-icon, 
+
+ .boxed-1 box-icon { 
+  width: 50px; 
+  height: 50px; 
+  display: flex; /* Use flexbox for centering */ 
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px; 
+  border-radius: 50%; 
+  background: #ff5000; /* Default background for icon container */ 
+  margin-bottom: 20px; 
+  color: white; /* Color for the icon itself */
+ } 
+
+
+
+ /* Feature Title */ 
+
+ .boxed h3,
+ .boxed-1 h3 { 
+  font-size: 2rem; 
+  font-weight: 900; 
+  margin-bottom: 10px; 
+ }
+ .boxed p { 
+   color: #555; 
+   font-size: 15px; 
+   line-height: 1.5; 
+  
+
+ } 
 
 .features-grid {
   display: grid;
@@ -281,111 +368,73 @@ a {
 }
 
 /* Feature Box */
-.boxed-1 {
-  background-color: #250e00;
+.feature-card { /* Renamed from .boxed, .boxed-1 to use a single class for dynamic generation */
   border-radius: 16px;
   padding: 30px 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: left;
-}
-.boxed {
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 30px 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.boxed:hover {
+.feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-.boxed box-icon,
-.boxed-1 box-icon {
+.feature-card .icon { /* This div wraps the box-icon */
   width: 50px;
-  height: 50%;
-  display: grid;
-  place-items: center;
+  height: 50px;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   border-radius: 50%;
-  background: #ff5000;
-  color: white;
+  background: #ff5000; /* Default background for icon container */
   margin-bottom: 20px;
 }
 
-/* Feature Title */
-.boxed h3 {
+.feature-card .icon box-icon { /* Target the box-icon directly for its color */
+  color: white; /* Color for the icon itself */
+}
+
+
+/* Specific styling for the first feature card if needed - this can be done by adding a modifier class in JS */
+.feature-card.dark-bg {
+  background-color: #250e00;
+}
+
+.feature-card.dark-bg h3 {
+  color: #ff5000;
+}
+
+.feature-card.dark-bg p {
+  color: #ededed;
+}
+
+.feature-card:not(.dark-bg) { /* Styles for cards without the dark-bg class */
+  background-color: #fff;
+}
+
+.feature-card:not(.dark-bg) h3 {
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 10px;
   color: #222;
 }
 
-/* Feature Description */
-.boxed p {
+.feature-card:not(.dark-bg) p {
   color: #555;
   font-size: 15px;
   line-height: 1.5;
-}
-/* Feature Title */
-.boxed-1 h3 {
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-  color: #ff5000;
-}
-
-/* Feature Description */
-.boxed-1 p {
-  color: #ededed;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.feature-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.feature-card .icon {
-  font-size: 45px;
-  color: #ff4000;
-  margin-bottom: 15px;
-}
-
-.feature-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #2c0e00;
-}
-
-.feature-card p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
 
 /* Experience Camell (CTA Section) */
 .experience-camell {
   background: #000313; /* Dark background */
   color: #fff;
-  /* padding: 100px 50px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -654,6 +703,16 @@ a {
   .newsletter-form .btn {
     max-width: 200px;
   }
+
+  /* Get Started cards responsive */
+  .card {
+    flex: 0 0 50%; /* Show 2 cards per row on tablets */
+    max-width: 50%;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax for smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
@@ -668,7 +727,8 @@ a {
   }
 
   .card{
-  max-width: 100%;
+    flex: 0 0 100%; /* Show 1 card per row on mobile */
+    max-width: 100%;
   }
 
   .nav-links {
@@ -721,9 +781,10 @@ a {
   }
 
   .cards-all {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Keep as row for slideshow */
+    justify-content: flex-start; /* Align cards to the start */
   }
+
   .feature-card {
     min-width: unset; /* Allow cards to shrink */
     width: 90%; /* Take up more width on small screens */
@@ -735,43 +796,35 @@ a {
     height: auto; /* Maintain aspect ratio */
   }
 
-  .feature-grid{
-    grid-template-columns: repeat(auto-fit, minmax(1, 1fr));
-    width: 100%;
-    margin: auto;
-  }
-
   .input {
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 1px solid #ff9665;
-  background-color: #a2aef100;
-  color: #3c1400;
-  font-size: 1rem;
-  outline: none;
-  width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ff9665;
+    background-color: #a2aef100;
+    color: #3c1400;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
   }
 
   .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-  gap: 30px;
-  max-width: 100%;
-  margin: 0 auto;
-}
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
   .btn-i {
-  padding: 12px 24px;
-  background-color: #ff4000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  width: 100%;
-  margin-top: 10px;
-}
+    padding: 12px 24px;
+    background-color: #ff4000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 480px) {
